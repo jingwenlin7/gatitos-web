@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Gatitor 😺 — El mundo de los gatitos</title>
+  <meta name="description" content="Gatitor: la web de los gatitos. Galería de fotos adorable, cuidados felinos, curiosidades y contacto." />
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🐱</text></svg>" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <!-- ===== Menú de navegación ===== -->
+  <header class="topbar">
+    <nav class="nav" aria-label="Menú principal">
+      <a class="brand" href="#inicio">🐾 Gatitor</a>
+      <button class="menu-btn" id="menuBtn" aria-expanded="false" aria-controls="menuLinks">☰ Menú</button>
+      <ul class="menu-links" id="menuLinks">
+        <li><a href="#inicio">Inicio</a></li>
+        <li><a href="#galeria">Galería</a></li>
+        <li><a href="#cuidados">Cuidados</a></li>
+        <li><a href="#curiosidades">Curiosidades</a></li>
+        <li><a href="#jingwen">Jingwen</a></li>
+        <li><a href="#contacto" class="cta">Contacto</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <!-- ===== Inicio ===== -->
+    <section id="inicio" class="hero">
+      <h1>¡Bienvenido a <span>Gatitor</span>! 🐱</h1>
+      <p class="lead">El lugar donde los gatitos mandan, Ronronea y disfruta.</p>
+      <div class="hero-actions">
+        <a class="btn" href="#galeria">Ver la galería 🐾</a>
+        <a class="btn btn-outline" href="#cuidados">Aprender cuidados</a>
+      </div>
+      <div class="michis-row" aria-hidden="true">
+        <span>🐈</span><span>🐈‍⬛</span><span>😻</span><span>🐾</span><span>🐈</span>
+      </div>
+    </section>
+
+    <!-- ===== Galería ===== -->
+    <section id="galeria" class="section">
+      <h2>📸 Galería de gatitos</h2>
+      <p>Un mosaico de michis adorable. Las fotos se cargan aleatoriamente: ¡recarga y verás gatitos nuevos!</p>
+      <div class="grid" id="galeriaGrid">
+        <!-- Las imágenes se generan con JS -->
+      </div>
+      <div class="center">
+        <button class="btn" id="masFotosBtn">Más gatitos 🐾</button>
+      </div>
+    </section>
+
+    <!-- ===== Cuidados ===== -->
+    <section id="cuidados" class="section alt">
+      <h2>🩺 Cuidados básicos</h2>
+      <div class="cards">
+        <article class="card">
+          <h3>🍗 Alimentación</h3>
+          <p>Piense en carne premium o veterinario recomendado, agua fresca siempre disponible y nada de chocolate, cebolla ni leche de vaca.</p>
+        </article>
+        <article class="card">
+          <h3>🧼 Higiene</h3>
+          <p>Arenero limpio a diario (un gato por arenero más uno extra), cepillado regular y baños solo cuando sea imprescindible.</p>
+        </article>
+        <article class="card">
+          <h3>💉 Salud</h3>
+          <p>Vacunas al día, desparasitación interna y externa, y revisión veterinaria al menos una vez al año.</p>
+        </article>
+        <article class="card">
+          <h3>🎾 Enriquecimiento</h3>
+          <p>Rascadores, juguetes, ventanas soleadas y tiempo de juego diario: un gato feliz es un gato entretenido.</p>
+        </article>
+      </div>
+    </section>
+
+    <!-- ===== Curiosidades ===== -->
+    <section id="curiosidades" class="section">
+      <h2>🤯 Curiosidades felinas</h2>
+      <ul class="facts">
+        <li>🐾 Los gatos tienen <strong>32 músculos en cada oreja</strong>.</li>
+        <li>😴 Duerme de <strong>12 a 16 horas al día</strong>: profesional del descanso.</li>
+        <li>🗣️ El maullido es un idioma <strong>inventado casi solo para humanos</strong>.</li>
+        <li>🦴 No sabe saborear lo dulce: su lengua no detecta azúcares.</li>
+        <li>💨 Puede alcanzar <strong>48 km/h</strong> en carreras cortas.</li>
+        <li>🧗 Los gatos mueven sus orejas independientemente como antenas parabólicas.</li>
+      </ul>
+    </section>
+
+    <!-- ===== Jingwen ===== -->
+    <section id="jingwen" class="section alt">
+      <h2>🙋‍♀️ Sobre Jingwen</h2>
+      <p class="lead">Creadora de Gatitor y devota del felino.</p>
+      <p>Jingwen diseña y mantiene esta web con mucho cariño por los gatitos. Si tiene dos gatos, tres tazas de café y una lista infinita de memes felinos.</p>
+      <blockquote>“Un día sin gatitos es un día sin ronroneos.” — Jingwen</blockquote>
+    </section>
+
+    <!-- ===== Contacto ===== -->
+    <section id="contacto" class="section">
+      <h2>📩 Contacto</h2>
+      <p>¿Quieres mandar la foto de tu michi o proponer una curiosidad? ¡Escríbenos!</p>
+      <form id="contactForm" class="form">
+        <label>Nombre <input type="text" name="nombre" required placeholder="Tu nombre" /></label>
+        <label>Email <input type="email" name="email" required placeholder="tu@correo.com" /></label>
+        <label>Mensaje <textarea name="mensaje" rows="4" required placeholder="Cuéntanos tu historia felina…"></textarea></label>
+        <button type="submit" class="btn">Enviar 🐾</button>
+        <p id="formOk" class="ok-msg" hidden>¡Merci! Tu mensaje ha sido maullado al universo 🐈</p>
+      </form>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <p>🐾 Gatitor — Hecho con ❤️ y ronroneos por Jingwen · 2026</p>
+    <p><a href="#inicio">Volver arriba ↑</a></p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
